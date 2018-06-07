@@ -1,0 +1,41 @@
+<div class="image">
+  <img alt="kitty" src="{{article.imageUrl}}"/>
+</div>
+<div class="content">
+  <div class="header">
+    {{article.title}}
+  </div>
+  <div class="meta">
+    <div class="ui blue label">
+      <i class="heart icon"></i>
+        {{article.votes}}
+    </div>
+
+    <span class="ui right floated">
+      <a class="ui  label" (click)="upvote()">
+      Upvote
+      </a>
+      <a class="ui  label" (click)="downvote()">
+      Downvote
+      </a>
+    </span>
+
+  </div>
+  <div class="meta date">
+    {{article.date() | date:'medium' }}
+  </div>
+  <div class="meta description">
+    <p>
+    {{article.desc}}
+    </p>
+  </div>
+  <div class="extra">
+    <a
+      href='#'
+      target='_blank'
+      class="ui right floated button primary" >
+        Read More
+        <i class="right chevron icon"></i>
+    </a>
+  </div>
+</div>
